@@ -81,8 +81,6 @@ ul {
     position: absolute;
 }
 
-
-
 .room-table {
     background-color: blue;
     max-width: 1024px;
@@ -96,6 +94,11 @@ ul {
         font-weight: normal;
         padding: 0.5em 0.5em 0.5em 0;
         text-transform: none;        
+    }
+    figure{
+        img{
+            max-width:260px;
+        }
     }
     .comon{
         

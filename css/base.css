@@ -90,7 +90,7 @@ ul {
 
 /*** END RESET ***/
 /*** PLACEHOLDERS ***/
-/* line 86, ../Sass/base.scss */
+/* line 84, ../Sass/base.scss */
 .room-table {
   background-color: blue;
   max-width: 1024px;
@@ -98,7 +98,7 @@ ul {
   margin: 0 auto;
   position: relative;
 }
-/* line 92, ../Sass/base.scss */
+/* line 90, ../Sass/base.scss */
 .room-table h3 {
   background: none repeat scroll 0 center rgba(0, 0, 0, 0);
   color: #003580;
@@ -107,16 +107,20 @@ ul {
   padding: 0.5em 0.5em 0.5em 0;
   text-transform: none;
 }
-/* line 103, ../Sass/base.scss */
+/* line 99, ../Sass/base.scss */
+.room-table figure img {
+  max-width: 260px;
+}
+/* line 106, ../Sass/base.scss */
 .room-table .nome {
   color: #0896ff;
   font-weight: bold;
 }
-/* line 113, ../Sass/base.scss */
+/* line 116, ../Sass/base.scss */
 .room-table .cards {
   display: table;
 }
-/* line 116, ../Sass/base.scss */
+/* line 119, ../Sass/base.scss */
 .room-table .card {
   display: inline-table;
   max-width: 300px;
