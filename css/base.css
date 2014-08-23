@@ -60,47 +60,46 @@ h1, h2, h3 {
 body {
   overflow-x: hidden;
   overflow-y: hidden;
-  position: absolute;
   width: 100%;
   height: 100%;
   font: small/1.2 Helvetica,sans-serif;
 }
 
-/* line 56, ../Sass/base.scss */
+/* line 55, ../Sass/base.scss */
 html {
   overflow-x: hidden;
   overflow-y: scroll;
   /*-webkit-overflow-scrolling: touch;*/
 }
 
-/* line 61, ../Sass/base.scss */
+/* line 60, ../Sass/base.scss */
 a {
   font-family: 'ff-din-web';
   font-size: 11px;
 }
-/* line 64, ../Sass/base.scss */
+/* line 63, ../Sass/base.scss */
 a:link, a:active, a:hover {
   font-size: inherit;
 }
 
-/* line 68, ../Sass/base.scss */
+/* line 67, ../Sass/base.scss */
 ul {
   list-style: none;
 }
 
 /*** END RESET ***/
 /*** PLACEHOLDERS ***/
-/* line 84, ../Sass/base.scss */
+/* line 83, ../Sass/base.scss */
 .room-table {
   background-color: blue;
   max-width: 1024px;
-  width: 100%;
-  margin: 0 auto;
+  width: 814px;
+  margin: 1410px 0 0 365px;
   position: relative;
 }
 /* line 90, ../Sass/base.scss */
 .room-table h3 {
-  background: none repeat scroll 0 center rgba(0, 0, 0, 0);
+  background: none repeat scroll 0 center transparent;
   color: #003580;
   font-size: 1.6em;
   font-weight: normal;
@@ -125,4 +124,9 @@ ul {
   display: inline-table;
   max-width: 300px;
   background-color: DeepPink;
+}
+
+/* line 138, ../Sass/base.scss */
+body {
+  background: url("../images/booking.png") no-repeat 0 0;
 }
