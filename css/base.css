@@ -67,14 +67,14 @@ body {
 
 /* line 55, ../Sass/base.scss */
 html {
-  overflow-x: hidden;
+  overflow-x: auto;
   overflow-y: scroll;
   /*-webkit-overflow-scrolling: touch;*/
 }
 
 /* line 60, ../Sass/base.scss */
 a {
-  font-family: 'ff-din-web';
+  font-family: small/1.2 Helvetica,sans-serif;
   font-size: 11px;
 }
 /* line 63, ../Sass/base.scss */
@@ -91,39 +91,52 @@ ul {
 /*** PLACEHOLDERS ***/
 /* line 83, ../Sass/base.scss */
 .room-table {
+<<<<<<< HEAD
   background-color: blue;
   float: left;
   margin: 1410px 0 0 20px;
+=======
+  max-width: 1024px;
+  width: 814px;
+  margin: 1410px 0 0 365px;
+>>>>>>> 51d274cfcb8a1161cb24fd7d71402b43097e5b9e
   position: relative;
   font-size: 12px;
   width: 814px;
 }
-/* line 90, ../Sass/base.scss */
+/* line 89, ../Sass/base.scss */
 .room-table h3 {
-  background: none repeat scroll 0 center transparent;
+  background: none repeat scroll 0 center rgba(0, 0, 0, 0);
   color: #003580;
   font-size: 1.6em;
   font-weight: normal;
   padding: 0.5em 0.5em 0.5em 0;
   text-transform: none;
 }
-/* line 98, ../Sass/base.scss */
+/* line 97, ../Sass/base.scss */
 .room-table figure {
   display: block;
 }
+<<<<<<< HEAD
 /* line 100, ../Sass/base.scss */
 .room-table figure img {
   max-width: 814px;
+=======
+/* line 99, ../Sass/base.scss */
+.room-table figure img {
+  width: 260px;
+  height: 173px;
+>>>>>>> 51d274cfcb8a1161cb24fd7d71402b43097e5b9e
   width: 100%;
 }
 /* line 108, ../Sass/base.scss */
 .room-table .nome {
   color: #0896ff;
-  font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   display: block;
   font-size: 15px;
   text-decoration: none;
+  text-indent: 3px;
 }
 /* line 115, ../Sass/base.scss */
 .room-table .nome:hover {
@@ -137,37 +150,88 @@ ul {
 }
 /* line 130, ../Sass/base.scss */
 .room-table .card {
-  display: table-cell;
+  display: block;
+  float: left;
   min-height: 400px;
   padding-bottom: 30px;
   padding-top: 30px;
+  width: calc(96% / 3);
+  margin-bottom: 2%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 /* line 139, ../Sass/base.scss */
-.room-table .info {
-  padding: 0 10px;
+.room-table .card:nth-child(2) {
+  margin: 0 2%;
 }
 /* line 142, ../Sass/base.scss */
+.room-table .card:hover {
+  cursor: pointer;
+}
+/* line 144, ../Sass/base.scss */
+.room-table .card:hover a {
+  text-decoration: underline;
+}
+/* line 149, ../Sass/base.scss */
+.room-table .main {
+  margin-bottom: 14px;
+}
+<<<<<<< HEAD
+/* line 139, ../Sass/base.scss */
+=======
+/* line 152, ../Sass/base.scss */
+>>>>>>> 51d274cfcb8a1161cb24fd7d71402b43097e5b9e
+.room-table .info {
+  padding: 0 8px 6px;
+}
+<<<<<<< HEAD
+/* line 142, ../Sass/base.scss */
+=======
+/* line 155, ../Sass/base.scss */
+>>>>>>> 51d274cfcb8a1161cb24fd7d71402b43097e5b9e
 .room-table .icon {
+  background-position: 50% 50%;
   display: inline-block;
+<<<<<<< HEAD
   width: 814px;
   height: 16px;
   background-color: #ce0000;
   vertical-align: middle;
+=======
+  height: 15px;
+>>>>>>> 51d274cfcb8a1161cb24fd7d71402b43097e5b9e
   margin-right: 4px;
+  vertical-align: text-top;
+  width: 15px;
+  margin-top: -2px;
 }
+<<<<<<< HEAD
 /* line 150, ../Sass/base.scss */
 .room-table .container {
   background-color: #c6d4e9;
 }
 /* line 153, ../Sass/base.scss */
-.room-table .conditions {
-  margin-bottom: 10px;
+=======
+/* line 164, ../Sass/base.scss */
+.room-table .container {
+  background-color: #c6d4e9;
 }
+/* line 167, ../Sass/base.scss */
+>>>>>>> 51d274cfcb8a1161cb24fd7d71402b43097e5b9e
+.room-table .conditions {
+  margin-bottom: 6px;
+}
+<<<<<<< HEAD
 /* line 155, ../Sass/base.scss */
+=======
+/* line 169, ../Sass/base.scss */
+>>>>>>> 51d274cfcb8a1161cb24fd7d71402b43097e5b9e
 .room-table .conditions span {
   background-color: #64b108;
   color: #fff;
   display: inline-block;
+<<<<<<< HEAD
   margin: 1410px 0 0 0;
   padding: 3px;
   -moz-border-radius: 3px;
@@ -175,9 +239,24 @@ ul {
   border-radius: 3px;
 }
 /* line 164, ../Sass/base.scss */
+=======
+  line-height: 16px;
+  margin: 2px;
+  padding: 4px 6px;
+}
+/* line 177, ../Sass/base.scss */
+.room-table .conditions .icon {
+  height: 14px;
+  margin-top: -1px;
+}
+/* line 182, ../Sass/base.scss */
+>>>>>>> 51d274cfcb8a1161cb24fd7d71402b43097e5b9e
 .room-table .other {
   color: #537cb4;
+  margin-left: 3px;
+  margin-bottom: 25px;
 }
+<<<<<<< HEAD
 /* line 167, ../Sass/base.scss */
 .room-table .other p:nth-child(even) {
   color: #003580;
@@ -186,23 +265,135 @@ ul {
 .room-table .price {
   position: relative;
   height: 30px;
-  line-height: 30px;
+=======
+/* line 186, ../Sass/base.scss */
+.room-table .other p {
+  margin-bottom: 6px;
 }
+/* line 188, ../Sass/base.scss */
+.room-table .other p:nth-child(even) {
+  color: #003580;
+}
+/* line 196, ../Sass/base.scss */
+.room-table .line {
+>>>>>>> 51d274cfcb8a1161cb24fd7d71402b43097e5b9e
+  line-height: 30px;
+  position: relative;
+  width: 100%;
+  padding: 6px 8px;
+  cursor: pointer;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* line 203, ../Sass/base.scss */
+.room-table .line:hover {
+  background-color: #fff;
+}
+/* line 205, ../Sass/base.scss */
+.room-table .line:hover button {
+  color: #586e9d;
+}
+/* line 209, ../Sass/base.scss */
+.room-table .line .icons {
+  float: left;
+  margin-right: 2px;
+  min-width: 16px;
+}
+/* line 214, ../Sass/base.scss */
+.room-table .line .icon {
+  display: inline-block;
+  height: 10px;
+  margin-left: -4px;
+  margin-right: 0;
+  width: 8px;
+}
+<<<<<<< HEAD
 /* line 179, ../Sass/base.scss */
 .room-table .price button {
   position: absolute;
   right: 5px;
   top: 5px;
+=======
+/* line 221, ../Sass/base.scss */
+.room-table .line button {
+>>>>>>> 51d274cfcb8a1161cb24fd7d71402b43097e5b9e
   background-color: #003ab7;
-  border: 0;
+  border: 0 none;
   color: #fff;
-  padding: 6px;
+  float: right;
+  padding: 7px 10px;
   text-transform: uppercase;
+<<<<<<< HEAD
   float: left;
   margin-left: 20px;
+=======
+  border-radius: 3px;
+}
+/* line 231, ../Sass/base.scss */
+.room-table .price {
+  float: left;
+}
+/* line 234, ../Sass/base.scss */
+.room-table .discount {
+  font-size: 10px;
+  line-height: 10px;
+}
+/* line 237, ../Sass/base.scss */
+.room-table .discount span {
+  color: #005d8a;
+  margin-right: 6px;
+  text-decoration: line-through;
+}
+/* line 242, ../Sass/base.scss */
+.room-table .discount strong {
+  color: #599c07;
+  font-weight: bold;
+}
+/* line 247, ../Sass/base.scss */
+.room-table .final {
+  line-height: 18px;
+  font-weight: bold;
+  color: #0796ff;
+}
+/* line 251, ../Sass/base.scss */
+.room-table .final em {
+  font-size: 10px;
+  font-style: normal;
+  margin-right: 1px;
+}
+/* line 256, ../Sass/base.scss */
+.room-table .final span {
+  font-size: 16px;
 }
 
-/* line 194, ../Sass/base.scss */
+/* line 262, ../Sass/base.scss */
+.icon {
+  background-repeat: no-repeat;
+}
+/* line 264, ../Sass/base.scss */
+.icon.snowflake {
+  background-image: url(/images/snowflake.png);
+}
+/* line 267, ../Sass/base.scss */
+.icon.sound {
+  background-image: url(/images/sound.png);
+}
+/* line 270, ../Sass/base.scss */
+.icon.wifi {
+  background-image: url(/images/wifi.png);
+}
+/* line 273, ../Sass/base.scss */
+.icon.bed {
+  background-image: url(/images/bed.png);
+}
+/* line 276, ../Sass/base.scss */
+.icon.user {
+  background-image: url(/images/user.png);
+>>>>>>> 51d274cfcb8a1161cb24fd7d71402b43097e5b9e
+}
+
+/* line 281, ../Sass/base.scss */
 body {
   background: url("../images/booking.png") no-repeat center 0;
 }
