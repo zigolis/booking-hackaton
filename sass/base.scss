@@ -82,11 +82,11 @@ ul {
 
 .room-table {
     background-color: blue;
-    max-width: 1024px;
-    width: 814px;
-    margin: 1410px 0 0 365px;
+    float: left;
+    margin: 1410px 0 0 20px;
     position: relative;
     font-size: 12px;
+    width: 814px;
     h3{
         background: none repeat scroll 0 center rgba(0, 0, 0, 0);
         color: #003580;
@@ -97,9 +97,8 @@ ul {
     }
     figure{
         display: block;
-        margin-bottom: 10px;
         img{
-            max-width:260px;
+            max-width:814px;
             width:100%;
         }
     }
@@ -142,7 +141,7 @@ ul {
     }
     .icon{
         display: inline-block;
-        width: 16px;
+        width: 814px;
         height: 16px;
         background-color: #ce0000;
         vertical-align: middle;
@@ -157,7 +156,7 @@ ul {
             background-color: #64b108;
             color: #fff;
             display: inline-block;
-            margin: 2px;
+            margin: 1410px 0 0 0;
             padding: 3px;
             @include border-radius(3px);
         }
@@ -165,7 +164,6 @@ ul {
     .other{
         color: #537cb4;
         p{
-            margin-bottom: 8px;
             &:nth-child(even){
                 color:#003580;
             }
@@ -187,11 +185,113 @@ ul {
             color: #fff;
             padding: 6px;
             text-transform: uppercase;
+            float: left;
+            margin-left: 20px;
         }
     }
 }
 
 body {
-    background: url('../images/booking.png') no-repeat 0 0;
+    background: url("../images/booking.png") no-repeat center 0;
 }
 
+#booking {
+    margin: 0 auto;
+    overflow: auto;
+    width: 1123px;
+}
+
+.bookings {
+    background: #537cb4;
+    border: 1px solid #003580;
+    float: left;
+    margin-top: 1410px;
+    width: 254px;
+    border-radius: 7px;
+    padding: 10px 5px;
+    position: relative;
+
+    h3 {
+        color: #D0DBED;
+        font-size: 20px;
+        font-weight: 100;
+        margin-bottom: 25px;
+    }
+
+    h4 {
+        color: #fff;
+        text-align: center;
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .price {
+        position: absolute;
+        top: -15px;
+        background: #64B108;
+        display: block;
+        width: 73px;
+        color: #fff;
+        padding: 20px 10px 5px 10px;
+        left: 150px;
+        border: 2px solid #fff;
+        border-radius: 5px;
+
+        i {
+            font-size: 20px;
+            font-style: normal;
+        }
+
+        small {
+            text-align: right;
+            display: block;
+            padding-right: 4px;
+            font-weight: 100;
+            opacity: .7;
+        }
+    }
+
+
+
+    li {
+        border-radius: 5px;
+        color: #fff;
+        cursor: pointer;
+        font-size: 14px;
+        padding: 10px 7px;
+        position: relative;
+
+        &:hover {
+            background: #003580;
+        }
+    }
+
+    .btn-book-now {
+        background: #08a3ff;
+        border: 2px solid #fff;
+        border-radius: 5px;
+        color: #fff;
+        display: block;
+        font-family: arial;
+        padding: 12px 0;
+        text-align: center;
+        text-decoration: none;
+        font-size: 19px;
+        margin: 10px 0;
+    }
+
+    p {
+        font-size: 11px;
+        color: #D59F82;
+        text-align: center;
+    }
+
+    .confirmation {
+        color: #fff;
+        margin-top: 5px;
+    }
+
+    ul, .price, .btn-book-now, p {
+        display: none !important;
+    }
+}
