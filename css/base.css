@@ -1,0 +1,124 @@
+/** FONTS **/
+/** widths **/
+/* line 9, ../Sass/base.scss */
+:focus {
+  outline-color: 0;
+  outline-style: none;
+  outline-width: 0;
+  font-size: 32px;
+}
+
+/* line 15, ../Sass/base.scss */
+::selection {
+  background-color: #98d4ff;
+  color: #FFF;
+}
+
+/* line 19, ../Sass/base.scss */
+::-moz-selection {
+  background-color: #98d4ff;
+  color: #FFF;
+}
+
+/* line 23, ../Sass/base.scss */
+.cf_:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+/* line 31, ../Sass/base.scss */
+.cf_ {
+  display: inline-block;
+}
+
+/* line 34, ../Sass/base.scss */
+html[xmlns] .cf_ {
+  display: block;
+}
+
+/* line 37, ../Sass/base.scss */
+* html .cf_ {
+  height: 1%;
+}
+
+/* line 40, ../Sass/base.scss */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/* line 44, ../Sass/base.scss */
+h1, h2, h3 {
+  font-weight: normal;
+}
+
+/* line 47, ../Sass/base.scss */
+body {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  font: small/1.2 Helvetica,sans-serif;
+}
+
+/* line 56, ../Sass/base.scss */
+html {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  /*-webkit-overflow-scrolling: touch;*/
+}
+
+/* line 61, ../Sass/base.scss */
+a {
+  font-family: 'ff-din-web';
+  font-size: 11px;
+}
+/* line 64, ../Sass/base.scss */
+a:link, a:active, a:hover {
+  font-size: inherit;
+}
+
+/* line 68, ../Sass/base.scss */
+ul {
+  list-style: none;
+}
+
+/*** END RESET ***/
+/*** PLACEHOLDERS ***/
+/* line 86, ../Sass/base.scss */
+.room-table {
+  background-color: blue;
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+/* line 92, ../Sass/base.scss */
+.room-table h3 {
+  background: none repeat scroll 0 center rgba(0, 0, 0, 0);
+  color: #003580;
+  font-size: 1.6em;
+  font-weight: normal;
+  padding: 0.5em 0.5em 0.5em 0;
+  text-transform: none;
+}
+/* line 103, ../Sass/base.scss */
+.room-table .nome {
+  color: #0896ff;
+  font-weight: bold;
+}
+/* line 113, ../Sass/base.scss */
+.room-table .cards {
+  display: table;
+}
+/* line 116, ../Sass/base.scss */
+.room-table .card {
+  display: inline-table;
+  max-width: 300px;
+  background-color: DeepPink;
+}
