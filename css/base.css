@@ -60,65 +60,64 @@ h1, h2, h3 {
 body {
   overflow-x: hidden;
   overflow-y: hidden;
-  position: absolute;
   width: 100%;
   height: 100%;
   font: small/1.2 Helvetica,sans-serif;
 }
 
-/* line 56, ../Sass/base.scss */
+/* line 55, ../Sass/base.scss */
 html {
   overflow-x: hidden;
   overflow-y: scroll;
   /*-webkit-overflow-scrolling: touch;*/
 }
 
-/* line 61, ../Sass/base.scss */
+/* line 60, ../Sass/base.scss */
 a {
   font-family: 'ff-din-web';
   font-size: 11px;
 }
-/* line 64, ../Sass/base.scss */
+/* line 63, ../Sass/base.scss */
 a:link, a:active, a:hover {
   font-size: inherit;
 }
 
-/* line 68, ../Sass/base.scss */
+/* line 67, ../Sass/base.scss */
 ul {
   list-style: none;
 }
 
 /*** END RESET ***/
 /*** PLACEHOLDERS ***/
-/* line 85, ../Sass/base.scss */
+/* line 83, ../Sass/base.scss */
 .room-table {
   background-color: blue;
-  max-width: 814px;
-  width: 100%;
-  margin: 0 auto;
+  max-width: 1024px;
+  width: 814px;
+  margin: 1410px 0 0 365px;
   position: relative;
   font-size: 12px;
 }
-/* line 92, ../Sass/base.scss */
+/* line 90, ../Sass/base.scss */
 .room-table h3 {
-  background: none repeat scroll 0 center rgba(0, 0, 0, 0);
+  background: none repeat scroll 0 center transparent;
   color: #003580;
   font-size: 1.6em;
   font-weight: normal;
   padding: 0.5em 0.5em 0.5em 0;
   text-transform: none;
 }
-/* line 100, ../Sass/base.scss */
+/* line 98, ../Sass/base.scss */
 .room-table figure {
   display: block;
   margin-bottom: 10px;
 }
-/* line 103, ../Sass/base.scss */
+/* line 101, ../Sass/base.scss */
 .room-table figure img {
   max-width: 260px;
   width: 100%;
 }
-/* line 111, ../Sass/base.scss */
+/* line 109, ../Sass/base.scss */
 .room-table .nome {
   color: #0896ff;
   font-weight: bold;
@@ -127,28 +126,28 @@ ul {
   font-size: 15px;
   text-decoration: none;
 }
-/* line 118, ../Sass/base.scss */
+/* line 116, ../Sass/base.scss */
 .room-table .nome:hover {
   text-decoration: underline;
 }
-/* line 128, ../Sass/base.scss */
+/* line 126, ../Sass/base.scss */
 .room-table .cards {
   display: table;
   position: relative;
   width: 100%;
 }
-/* line 133, ../Sass/base.scss */
+/* line 131, ../Sass/base.scss */
 .room-table .card {
   display: table-cell;
   min-height: 400px;
   padding-bottom: 30px;
   padding-top: 30px;
 }
-/* line 142, ../Sass/base.scss */
+/* line 140, ../Sass/base.scss */
 .room-table .info {
   padding: 0 10px;
 }
-/* line 145, ../Sass/base.scss */
+/* line 143, ../Sass/base.scss */
 .room-table .icon {
   display: inline-block;
   width: 16px;
@@ -157,46 +156,44 @@ ul {
   vertical-align: middle;
   margin-right: 4px;
 }
-/* line 153, ../Sass/base.scss */
+/* line 151, ../Sass/base.scss */
 .room-table .container {
   background-color: #c6d4e9;
 }
-/* line 156, ../Sass/base.scss */
+/* line 154, ../Sass/base.scss */
 .room-table .conditions {
   margin-bottom: 10px;
 }
-/* line 158, ../Sass/base.scss */
+/* line 156, ../Sass/base.scss */
 .room-table .conditions span {
   background-color: #64b108;
   color: #fff;
   display: inline-block;
   margin: 2px;
   padding: 3px;
-  -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
+  -webkit-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 167, ../Sass/base.scss */
+/* line 165, ../Sass/base.scss */
 .room-table .other {
   color: #537cb4;
 }
-/* line 169, ../Sass/base.scss */
+/* line 167, ../Sass/base.scss */
 .room-table .other p {
   margin-bottom: 8px;
 }
-/* line 171, ../Sass/base.scss */
+/* line 169, ../Sass/base.scss */
 .room-table .other p:nth-child(even) {
   color: #003580;
 }
-/* line 179, ../Sass/base.scss */
+/* line 177, ../Sass/base.scss */
 .room-table .price {
   position: relative;
   height: 30px;
   line-height: 30px;
 }
-/* line 183, ../Sass/base.scss */
+/* line 181, ../Sass/base.scss */
 .room-table .price button {
   position: absolute;
   right: 5px;
@@ -206,4 +203,9 @@ ul {
   color: #fff;
   padding: 6px;
   text-transform: uppercase;
+}
+
+/* line 194, ../Sass/base.scss */
+body {
+  background: url("../images/booking.png") no-repeat 0 0;
 }

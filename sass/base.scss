@@ -2,7 +2,7 @@
 
 /** FONTS **/
 
-/** widths **/    
+/** widths **/
 $min-width: 320px;
 $max-width: 670px;
 
@@ -47,7 +47,6 @@ h1, h2, h3{
 body{
     overflow-x:hidden;
     overflow-y:hidden;
-    position:absolute;
     width: 100%;
     height: 100%;
     font: small/1.2 Helvetica,sans-serif;
@@ -56,7 +55,7 @@ body{
 html{
     overflow-x:hidden;
     overflow-y:scroll;
-    /*-webkit-overflow-scrolling: touch;*/	
+    /*-webkit-overflow-scrolling: touch;*/
 }
 a{
     font-family:'ff-din-web';
@@ -83,9 +82,9 @@ ul {
 
 .room-table {
     background-color: blue;
-    max-width: 814px;
-    width: 100%;
-    margin: 0 auto;
+    max-width: 1024px;
+    width: 814px;
+    margin: 1410px 0 0 365px;
     position: relative;
     font-size: 12px;
     h3{
@@ -94,7 +93,7 @@ ul {
         font-size: 1.6em;
         font-weight: normal;
         padding: 0.5em 0.5em 0.5em 0;
-        text-transform: none;        
+        text-transform: none;
     }
     figure{
         display: block;
@@ -105,7 +104,7 @@ ul {
         }
     }
     .comon{
-        
+
     }
     .nome{
         color: #0896ff;
@@ -119,10 +118,10 @@ ul {
         }
     }
     .filter{
-        
+
     }
     .table{
-        
+
     }
     .cards{
         display: table;
@@ -136,7 +135,7 @@ ul {
         padding-top: 30px;
     }
     .main{
-        
+
     }
     .info{
         padding: 0 10px;
@@ -148,9 +147,9 @@ ul {
         background-color: #ce0000;
         vertical-align: middle;
         margin-right: 4px;
-    } 
+    }
     .container{
-        background-color: #c6d4e9;        
+        background-color: #c6d4e9;
     }
     .conditions{
         margin-bottom: 10px;
@@ -166,12 +165,12 @@ ul {
     .other{
         color: #537cb4;
         p{
-            margin-bottom: 8px;    
+            margin-bottom: 8px;
             &:nth-child(even){
                 color:#003580;
             }
         }
-            
+
     }
     .prices{
     }
@@ -192,4 +191,7 @@ ul {
     }
 }
 
+body {
+    background: url('../images/booking.png') no-repeat 0 0;
+}
 
