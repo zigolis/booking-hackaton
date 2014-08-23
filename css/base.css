@@ -93,12 +93,13 @@ ul {
 /* line 84, ../Sass/base.scss */
 .room-table {
   background-color: blue;
-  max-width: 1024px;
+  max-width: 814px;
   width: 100%;
   margin: 0 auto;
   position: relative;
+  font-size: 12px;
 }
-/* line 90, ../Sass/base.scss */
+/* line 91, ../Sass/base.scss */
 .room-table h3 {
   background: none repeat scroll 0 center rgba(0, 0, 0, 0);
   color: #003580;
@@ -108,21 +109,101 @@ ul {
   text-transform: none;
 }
 /* line 99, ../Sass/base.scss */
+.room-table figure {
+  display: block;
+  margin-bottom: 10px;
+}
+/* line 102, ../Sass/base.scss */
 .room-table figure img {
   max-width: 260px;
+  width: 100%;
 }
-/* line 106, ../Sass/base.scss */
+/* line 110, ../Sass/base.scss */
 .room-table .nome {
   color: #0896ff;
   font-weight: bold;
+  margin-bottom: 10px;
+  display: block;
+  font-size: 15px;
+  text-decoration: none;
 }
-/* line 116, ../Sass/base.scss */
+/* line 117, ../Sass/base.scss */
+.room-table .nome:hover {
+  text-decoration: underline;
+}
+/* line 127, ../Sass/base.scss */
 .room-table .cards {
   display: table;
+  position: relative;
+  width: 100%;
 }
-/* line 119, ../Sass/base.scss */
+/* line 132, ../Sass/base.scss */
 .room-table .card {
-  display: inline-table;
-  max-width: 300px;
-  background-color: DeepPink;
+  display: table-cell;
+  min-height: 400px;
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+/* line 141, ../Sass/base.scss */
+.room-table .info {
+  padding: 0 10px;
+}
+/* line 144, ../Sass/base.scss */
+.room-table .icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-color: #ce0000;
+  vertical-align: middle;
+  margin-right: 4px;
+}
+/* line 152, ../Sass/base.scss */
+.room-table .container {
+  background-color: #c6d4e9;
+}
+/* line 155, ../Sass/base.scss */
+.room-table .conditions {
+  margin-bottom: 10px;
+}
+/* line 157, ../Sass/base.scss */
+.room-table .conditions span {
+  background-color: #64b108;
+  color: #fff;
+  display: inline-block;
+  margin: 2px;
+  padding: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+/* line 166, ../Sass/base.scss */
+.room-table .other {
+  color: #537cb4;
+}
+/* line 168, ../Sass/base.scss */
+.room-table .other p {
+  margin-bottom: 8px;
+}
+/* line 170, ../Sass/base.scss */
+.room-table .other p:nth-child(even) {
+  color: #003580;
+}
+/* line 178, ../Sass/base.scss */
+.room-table .price {
+  position: relative;
+  height: 30px;
+  line-height: 30px;
+}
+/* line 182, ../Sass/base.scss */
+.room-table .price button {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  background-color: #003ab7;
+  border: 0;
+  color: #fff;
+  padding: 6px;
+  text-transform: uppercase;
 }
