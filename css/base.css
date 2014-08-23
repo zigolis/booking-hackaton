@@ -90,7 +90,7 @@ ul {
 
 /*** END RESET ***/
 /*** PLACEHOLDERS ***/
-/* line 84, ../Sass/base.scss */
+/* line 85, ../Sass/base.scss */
 .room-table {
   background-color: blue;
   max-width: 814px;
@@ -99,7 +99,7 @@ ul {
   position: relative;
   font-size: 12px;
 }
-/* line 91, ../Sass/base.scss */
+/* line 92, ../Sass/base.scss */
 .room-table h3 {
   background: none repeat scroll 0 center rgba(0, 0, 0, 0);
   color: #003580;
@@ -108,17 +108,17 @@ ul {
   padding: 0.5em 0.5em 0.5em 0;
   text-transform: none;
 }
-/* line 99, ../Sass/base.scss */
+/* line 100, ../Sass/base.scss */
 .room-table figure {
   display: block;
   margin-bottom: 10px;
 }
-/* line 102, ../Sass/base.scss */
+/* line 103, ../Sass/base.scss */
 .room-table figure img {
   max-width: 260px;
   width: 100%;
 }
-/* line 110, ../Sass/base.scss */
+/* line 111, ../Sass/base.scss */
 .room-table .nome {
   color: #0896ff;
   font-weight: bold;
@@ -127,28 +127,28 @@ ul {
   font-size: 15px;
   text-decoration: none;
 }
-/* line 117, ../Sass/base.scss */
+/* line 118, ../Sass/base.scss */
 .room-table .nome:hover {
   text-decoration: underline;
 }
-/* line 127, ../Sass/base.scss */
+/* line 128, ../Sass/base.scss */
 .room-table .cards {
   display: table;
   position: relative;
   width: 100%;
 }
-/* line 132, ../Sass/base.scss */
+/* line 133, ../Sass/base.scss */
 .room-table .card {
   display: table-cell;
   min-height: 400px;
   padding-bottom: 30px;
   padding-top: 30px;
 }
-/* line 141, ../Sass/base.scss */
+/* line 142, ../Sass/base.scss */
 .room-table .info {
   padding: 0 10px;
 }
-/* line 144, ../Sass/base.scss */
+/* line 145, ../Sass/base.scss */
 .room-table .icon {
   display: inline-block;
   width: 16px;
@@ -157,15 +157,15 @@ ul {
   vertical-align: middle;
   margin-right: 4px;
 }
-/* line 152, ../Sass/base.scss */
+/* line 153, ../Sass/base.scss */
 .room-table .container {
   background-color: #c6d4e9;
 }
-/* line 155, ../Sass/base.scss */
+/* line 156, ../Sass/base.scss */
 .room-table .conditions {
   margin-bottom: 10px;
 }
-/* line 157, ../Sass/base.scss */
+/* line 158, ../Sass/base.scss */
 .room-table .conditions span {
   background-color: #64b108;
   color: #fff;
@@ -178,25 +178,25 @@ ul {
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 166, ../Sass/base.scss */
+/* line 167, ../Sass/base.scss */
 .room-table .other {
   color: #537cb4;
 }
-/* line 168, ../Sass/base.scss */
+/* line 169, ../Sass/base.scss */
 .room-table .other p {
   margin-bottom: 8px;
 }
-/* line 170, ../Sass/base.scss */
+/* line 171, ../Sass/base.scss */
 .room-table .other p:nth-child(even) {
   color: #003580;
 }
-/* line 178, ../Sass/base.scss */
+/* line 179, ../Sass/base.scss */
 .room-table .price {
   position: relative;
   height: 30px;
   line-height: 30px;
 }
-/* line 182, ../Sass/base.scss */
+/* line 183, ../Sass/base.scss */
 .room-table .price button {
   position: absolute;
   right: 5px;
