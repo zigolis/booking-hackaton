@@ -2,7 +2,7 @@
 
 /** FONTS **/
 
-/** widths **/
+/** widths **/    
 $min-width: 320px;
 $max-width: 670px;
 
@@ -47,6 +47,7 @@ h1, h2, h3{
 body{
     overflow-x:hidden;
     overflow-y:hidden;
+    position:absolute;
     width: 100%;
     height: 100%;
     font: small/1.2 Helvetica,sans-serif;
@@ -55,7 +56,7 @@ body{
 html{
     overflow-x:hidden;
     overflow-y:scroll;
-    /*-webkit-overflow-scrolling: touch;*/
+    /*-webkit-overflow-scrolling: touch;*/	
 }
 a{
     font-family:'ff-din-web';
@@ -82,59 +83,113 @@ ul {
 
 .room-table {
     background-color: blue;
-    max-width: 1024px;
-    width: 814px;
-    margin: 1410px 0 0 365px;
+    max-width: 814px;
+    width: 100%;
+    margin: 0 auto;
     position: relative;
-
+    font-size: 12px;
     h3{
         background: none repeat scroll 0 center rgba(0, 0, 0, 0);
         color: #003580;
         font-size: 1.6em;
         font-weight: normal;
         padding: 0.5em 0.5em 0.5em 0;
-        text-transform: none;
+        text-transform: none;        
     }
     figure{
+        display: block;
+        margin-bottom: 10px;
         img{
             max-width:260px;
+            width:100%;
         }
     }
     .comon{
-
+        
     }
     .nome{
         color: #0896ff;
-        font-weight: bold;;
+        font-weight: bold;
+        margin-bottom: 10px;
+        display: block;
+        font-size: 15px;
+        text-decoration: none;
+        &:hover{
+            text-decoration: underline;
+        }
     }
     .filter{
-
+        
     }
     .table{
-
+        
     }
     .cards{
         display: table;
+        position: relative;
+        width: 100%;
     }
     .card{
-        display: inline-table;
-        max-width:300px;
-        background-color: DeepPink;
+        display: table-cell;
+        min-height: 400px;
+        padding-bottom: 30px;
+        padding-top: 30px;
     }
     .main{
-
+        
     }
     .info{
-
+        padding: 0 10px;
+    }
+    .icon{
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        background-color: #ce0000;
+        vertical-align: middle;
+        margin-right: 4px;
+    } 
+    .container{
+        background-color: #c6d4e9;        
     }
     .conditions{
-
+        margin-bottom: 10px;
+        span{
+            background-color: #64b108;
+            color: #fff;
+            display: inline-block;
+            margin: 2px;
+            padding: 3px;
+            @include border-radius(3px);
+        }
     }
     .other{
-
+        color: #537cb4;
+        p{
+            margin-bottom: 8px;    
+            &:nth-child(even){
+                color:#003580;
+            }
+        }
+            
+    }
+    .prices{
+    }
+    .price{
+        position: relative;
+        height:30px;
+        line-height: 30px;
+        button{
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            background-color: #003ab7;
+            border:0;
+            color: #fff;
+            padding: 6px;
+            text-transform: uppercase;
+        }
     }
 }
 
-body {
-    background: url('../images/booking.png') no-repeat 0 0;
-}
+
