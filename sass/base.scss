@@ -5,92 +5,111 @@
 /** widths **/
 $min-width: 320px;
 $max-width: 670px;
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
 
-:focus{
-    outline-color:0;
-    outline-style:none;
-    outline-width:0;
-    font-size: 32px;
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
 }
-::selection{
-    background-color:#98d4ff;
-    color:#FFF;
-}
-::-moz-selection{
-    background-color:#98d4ff;
-    color:#FFF;
-}
-.cf_:after{
-    content:".";
-    display:block;
-    clear:both;
-    visibility:hidden;
-    line-height:0;
-    height:0;
-}
-.cf_{
-    display:inline-block;
-}
-html[xmlns] .cf_{
-    display:block;
-}
-* html .cf_{
-    height:1%;
-}
-*{
-    padding:0;
-    margin:0;
-}
-h1, h2, h3{
-    font-weight:normal;
-}
-body{
-    overflow-x:hidden;
-    overflow-y:hidden;
-    width: 100%;
-    height: 100%;
-    font: small/1.2 Helvetica,sans-serif;
+body {
+    font-family: Helvetica, Arial, sans-serif;
 }
 
-html{
-    overflow-x:auto;
-    overflow-y:scroll;
-    /*-webkit-overflow-scrolling: touch;*/
-}
-a{
-    font-family:small/1.2 Helvetica,sans-serif;
-    font-size:11px;
-    &:link,&:active,&:hover{
-        font-size:inherit;
-    }
-}
-ul {
-    list-style: none
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
 }
 
-/*** END RESET ***/
-
-/*** PLACEHOLDERS ***/
-
-%fill-all{
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    position: absolute;
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
 }
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images, videos, audio and canvas and the bottom of
+ * their containers: h5bp.com/i/440
+ */
+
+audio,
+canvas,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browse Happy prompt
+   ========================================================================== */
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
 
 .room-table {
-    background-color: blue;
     float: left;
     margin: 1410px 0 0 20px;
     max-width: 1024px;
-    width: 814px;
-    margin: 1410px 0 0 365px;
     position: relative;
     font-size: 12px;
     width: 814px;
-    h3{
+
+    h3 {
         background: none repeat scroll 0 center rgba(0, 0, 0, 0);
         color: #003580;
         font-size: 1.6em;
@@ -98,195 +117,265 @@ ul {
         padding: 0.5em 0.5em 0.5em 0;
         text-transform: none;
     }
-    figure{
+    figure {
+        padding: 0;
+        margin: 0;
         display: block;
-        img{
+        img {
             max-width:814px;
             width:260px;
             height:173px;
         }
     }
-    .comon{
+    .comon {
 
     }
-    .nome{
-        color: #0896ff;
-        margin-bottom: 12px;
-        display: block;
-        font-size: 15px;
-        text-decoration: none;
-        text-indent: 3px;
-        &:hover{
-            text-decoration: underline;
-        }
-    }
-    .filter{
+    .filter {
 
     }
-    .table{
+    .table {
 
     }
-    .cards{
+    .cards {
         display: table;
         position: relative;
         width: 100%;
-    }
-    .card{
-        display: block;
-        float: left;
-        min-height: 400px;
-        padding-bottom: 30px;
-        padding-top: 30px;
-        width: calc(96% / 3);
-        margin-bottom:2%;
-        @include box-sizing(border-box);
-        &:nth-child(2){
-            margin:0 2%;
-        }
-        &:hover{
-            cursor:pointer;
-            a{
-                text-decoration: underline;
+
+        .card {
+            background-color: #c6d4e9;
+            display: block;
+            float: left;
+            min-height: 400px;
+            padding-bottom: 30px;
+            width: calc(96% / 3);
+            margin-bottom:2%;
+            @include box-sizing(border-box);
+            &:nth-child(2) {
+                margin:0 2%;
             }
-        }
-    }
-    .main{
-        margin-bottom: 14px;
-    }
-    .info{
-        padding: 0 8px 6px;
-    }
-    .icon{
-        background-position:50% 50%;
-        display: inline-block;
-        height: 16px;
-        background-color: #ce0000;
-        vertical-align: middle;
-        height: 15px;
-        margin-right: 4px;
-        vertical-align: text-top;
-        width: 15px;
-        margin-top: -2px;
-    }
-    .container{
-        background-color: #c6d4e9;
-    }
-    .conditions{
-        margin-bottom: 6px;
-        span{
-            background-color: #64b108;
-            color: #fff;
-            display: inline-block;
-            margin: 1410px 0 0 0;
-            padding: 3px;
-            @include border-radius(3px);
-            line-height: 16px;
-            margin: 2px;
-            padding: 4px 6px;
-        }
-        .icon{
-            height:14px;
-            margin-top: -1px;
-        }
-    }
-    .other{
-        color: #537cb4;
-        margin-left: 3px;
-        margin-bottom: 25px;
-        p{
-            margin-bottom: 6px;
-            &:nth-child(even){
-                color:#003580;
+
+            .info {
+                padding: 0 8px 6px;
+
+                h4 {
+                    color: #0896ff;
+                    margin-bottom: 12px;
+                    display: block;
+                    font-size: 15px;
+                    text-decoration: none;
+                    text-indent: 3px;
+                }
+                .icon {
+                    background-position: 50% 50%;
+                    display: inline-block;
+                    height: 16px;
+                    margin-right: 4px;
+                    margin-top: -2px;
+                    vertical-align: middle;
+                    width: 15px;
+                }
+                .other {
+                    color: #537cb4;
+                    margin: 0 4px 15px;
+                    p {
+                        margin: 4px 0;
+                        & + p {
+                            color:#003580;
+                        }
+                    }
+                }
+
             }
+
+
+            .options {
+                margin-bottom: 6px;
+
+                span {
+                    background-color: #64b108;
+                    color: #fff;
+                    display: inline-block;
+                    margin: 1410px 0 0 0;
+                    padding: 3px;
+                    @include border-radius(3px);
+                    line-height: 16px;
+                    margin: 2px;
+                    padding: 4px 6px;
+                }
+                .icon {
+                    height:14px;
+                    margin-top: -1px;
+                }
+
+            }
+
+            .conditions {
+                list-style: none;
+                margin: 0;
+                padding: 0 10px;
+                
+                li {
+                    position: relative;
+                    display: block;
+                    width: 100%;
+                    @include border-radius(4px);
+                    @include box-sizing(border-box);
+                    @extend .clearfix;
+                    @extend .transition-linear;
+
+                    &:hover{
+                        background-color: #fff;
+
+                        .tooltip {
+                            display: block;
+                        }
+                    }
+                    .room {
+                        display: table;
+                        padding: 4px 4px 4px 6px;
+                        position: relative;
+
+                        > span {
+                            display: table-cell;
+                            vertical-align: middle;
+                            
+                            &.icons {
+                                padding-right: 2px;
+                                width: 32px;
+
+                                .icon {
+                                    display: block;
+                                    float: left;
+                                    height: 10px;
+                                    margin-right: 0;
+                                    width: 8px;
+                                }
+
+                            }
+                            &.price {
+                                display: table-cell;
+
+                                .discount {
+                                    font-size: 10px;
+                                    line-height: 10px;
+                                    display: block;
+
+                                    span {
+                                        color: #005d8a;
+                                        margin-right: 6px;
+                                        text-decoration: line-through;
+                                    }
+                                    strong {
+                                        color:#599c07;
+                                        font-weight: bold;
+                                    }
+                                }
+
+                            }
+                            &.btn {
+                                display: table-cell;
+                                width: 1%;
+
+                                > a {
+                                    background-color: #003ab7;
+                                    border: 0 none;
+                                    @include border-radius(3px);
+                                    color: #fff;
+                                    display: block;
+                                    margin-left: 20px;
+                                    padding: 7px 10px;
+                                    text-align: center;
+                                    text-decoration: none;
+                                    text-transform: uppercase;
+                                }
+
+                            }
+
+                        }
+
+                    }
+                    .tooltip {
+                        background: #FFF0CA;
+                        border: #EEAE01 solid 1px;
+                        color: #705A3F;
+                        display: none;
+                        padding: 15px;
+                        position: absolute;
+                        right: -webkit-calc(-100% - 90px);
+                        right: -moz-calc(-100% - 90px);
+                        right: calc(-100% - 90px);
+                        top: -60px;
+                        width: 280px;
+
+                        &:after {
+                            border-style: solid;
+                            border-width: 15px 15px 15px 0;
+                            border-color: transparent #FFF0CA;
+                            content: '';
+                            display: block;
+                            left: -15px;
+                            margin-top: -7.5px;
+                            position: absolute;
+                            top: 50%;
+                            width: 0;
+                            z-index: 1;
+                        }
+                        &:before {
+                            border-style: solid;
+                            border-width: 15px 15px 15px 0;
+                            border-color: transparent #EEAE01;
+                            content: '';
+                            display: block;
+                            left: -16px;
+                            margin-top: -8px;
+                            position: absolute;
+                            top: 50%;
+                            width: 0;
+                            z-index: 0;
+                        }
+
+                    }
+
+                }
+
+                .final {
+                    line-height: 18px;
+                    font-weight: bold;
+                    color: #0796ff;
+                    em {
+                        font-size: 10px;
+                        font-style: normal;
+                        margin-right: 1px;
+                    }
+                    span {
+                        font-size: 16px;
+                    }
+                }
+
+            }
+
         }
-    }
-    .buy-it{
 
     }
-    .line{
-        line-height: 30px;
-        position: relative;
-        width: 100%;
-        padding: 6px 8px;
-        cursor: pointer;
-        @include box-sizing(border-box);
-        &:hover{
-            background-color: #fff;
-            button{
-                color:#586e9d;
-            }
-        }
-        .icons{
-            float: left;
-            margin-right: 2px;
-            min-width: 16px;
-        }
-        .icon{
-            display: inline-block;
-            height: 10px;
-            margin-left: -4px;
-            margin-right: 0;
-            width: 8px;
-        }
-        button{
-            background-color: #003ab7;
-            border: 0 none;
-            color: #fff;
-            float: right;
-            padding: 7px 10px;
-            text-transform: uppercase;
-            float: left;
-            margin-left: 20px;
-            border-radius:3px;
-        }
-    }
-    .price{
-        float: left;
-    }
-    .discount{
-        font-size: 10px;
-        line-height: 10px;
-        span{
-            color: #005d8a;
-            margin-right: 6px;
-            text-decoration: line-through;
-        }
-        strong{
-            color:#599c07;
-            font-weight: bold;
-        }
-    }
-    .final{
-        line-height: 18px;
-        font-weight: bold;
-        color: #0796ff;
-        em{
-            font-size: 10px;
-            font-style: normal;
-            margin-right: 1px;
-        }
-        span{
-            font-size: 16px;
-        }
-    }
+
 }
 
-.icon{
+.icon {
     background-repeat: no-repeat;
-    &.snowflake{
-        background-image:url(/images/snowflake.png);
+    &.snowflake {
+        background-image:url("/images/snowflake.png");
     }
-    &.sound{
-        background-image:url(/images/sound.png);
+    &.sound {
+        background-image:url("/images/sound.png");
     }
-    &.wifi{
-        background-image:url(/images/wifi.png);
+    &.wifi {
+        background-image:url("/images/wifi.png");
     }
-    &.bed{
-        background-image:url(/images/bed.png);
+    &.bed {
+        background-image:url("/images/bed.png");
     }
-    &.user{
-        background-image:url(/images/user.png);
+    &.user {
+        background-image:url("/images/user.png");
     }
 }
 
@@ -296,7 +385,6 @@ body {
 
 #booking {
     margin: 0 auto;
-    overflow: auto;
     width: 1123px;
 }
 
@@ -392,5 +480,176 @@ body {
 
     ul, .price, .btn-book-now, p {
         display: none !important;
+    }
+}
+
+
+.transition-linear {
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+}
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
     }
 }
