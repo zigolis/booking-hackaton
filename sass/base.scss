@@ -100,6 +100,36 @@ textarea {
    ========================================================================== */
 
 
+.icon {
+    background-repeat: no-repeat;
+
+    &.snowflake {
+        background-image:url("/images/snowflake.png");
+    }
+    &.sound {
+        background-image:url("/images/sound.png");
+    }
+    &.wifi {
+        background-image:url("/images/wifi.png");
+    }
+    &.bed {
+        background-image:url("/images/bed.png");
+    }
+    &.user {
+        background-image:url("/images/user.png");
+    }
+    
+}
+
+body {
+    background: url("../images/booking.png") no-repeat center 0;
+}
+
+#booking {
+    margin: 0 auto;
+    width: 1123px;
+}
+
 
 .room-table {
     float: left;
@@ -138,22 +168,45 @@ textarea {
     }
     .cards {
         display: table;
+        padding-bottom: 100px;
         position: relative;
         width: 100%;
 
         .card {
             background-color: #c6d4e9;
+            @include box-sizing(border-box);
             display: block;
             float: left;
             min-height: 400px;
+            margin: 0 2% 2% 0;
             padding-bottom: 30px;
+            width: -webkit-calc(96% / 3);
+            width: -moz-calc(96% / 3);
             width: calc(96% / 3);
-            margin-bottom:2%;
-            @include box-sizing(border-box);
-            &:nth-child(2) {
-                margin:0 2%;
-            }
 
+            &:nth-child(3n+3) {
+                margin-right: 0;
+
+                .conditions {
+                    li {
+                        .tooltip {
+                            left: -webkit-calc(-100% - 90px);
+                            left: -moz-calc(-100% - 90px);
+                            left: calc(-100% - 90px);
+                            right: auto;
+
+                            &:before, &:after {
+                                border-width: 15px 0 15px 15px;
+                                left: auto;
+                                right: -16px;
+                            }
+                            &:after {
+                                right: -15px;
+                            }
+                        }
+                    }
+                }
+            }
             .info {
                 padding: 0 8px 6px;
 
@@ -192,12 +245,10 @@ textarea {
                 margin-bottom: 6px;
 
                 span {
-                    background-color: #64b108;
+                    background-color: #64B108;
+                    @include border-radius(3px);
                     color: #fff;
                     display: inline-block;
-                    margin: 1410px 0 0 0;
-                    padding: 3px;
-                    @include border-radius(3px);
                     line-height: 16px;
                     margin: 2px;
                     padding: 4px 6px;
@@ -215,11 +266,11 @@ textarea {
                 padding: 0 10px;
                 
                 li {
-                    position: relative;
-                    display: block;
-                    width: 100%;
                     @include border-radius(4px);
                     @include box-sizing(border-box);
+                    display: block;
+                    position: relative;
+                    width: 100%;
                     @extend .clearfix;
                     @extend .transition-linear;
 
@@ -227,7 +278,7 @@ textarea {
                         background-color: #fff;
 
                         .tooltip {
-                            display: block;
+                            display: block !important;
                         }
                     }
                     .room {
@@ -287,6 +338,11 @@ textarea {
                                     text-align: center;
                                     text-decoration: none;
                                     text-transform: uppercase;
+                                    @extend .transition-linear;
+
+                                    &:hover {
+                                        background-color: lighten(#003ab7, 20%);
+                                    }
                                 }
 
                             }
@@ -298,27 +354,20 @@ textarea {
                         background: #FFF0CA;
                         border: #EEAE01 solid 1px;
                         color: #705A3F;
-                        display: none;
+                        display: block;
+                        height: auto;
+                        opacity: 0;
                         padding: 15px;
                         position: absolute;
                         right: -webkit-calc(-100% - 90px);
                         right: -moz-calc(-100% - 90px);
                         right: calc(-100% - 90px);
-                        top: -60px;
+                        @extend .transition-linear;
                         width: 280px;
+                        z-index: 999;
 
-                        &:after {
-                            border-style: solid;
-                            border-width: 15px 15px 15px 0;
-                            border-color: transparent #FFF0CA;
-                            content: '';
-                            display: block;
-                            left: -15px;
-                            margin-top: -7.5px;
-                            position: absolute;
-                            top: 50%;
-                            width: 0;
-                            z-index: 1;
+                        &.hover {
+                            opacity: 1;
                         }
                         &:before {
                             border-style: solid;
@@ -327,11 +376,39 @@ textarea {
                             content: '';
                             display: block;
                             left: -16px;
-                            margin-top: -8px;
+                            margin-top: -14px;
                             position: absolute;
                             top: 50%;
                             width: 0;
                             z-index: 0;
+                        }
+                        &:after {
+                            border-style: solid;
+                            border-width: 15px 15px 15px 0;
+                            border-color: transparent #FFF0CA;
+                            content: '';
+                            display: block;
+                            left: -15px;
+                            margin-top: -13.5px;
+                            position: absolute;
+                            top: 50%;
+                            width: 0;
+                            z-index: 1;
+                        }
+                        h5 {
+                            font-size: 110%;
+                            margin: 0.8em 0 0.5em;
+
+                            &:first-child {
+                                margin-top: 0;
+                            }
+                        }
+                        p {
+                            margin: 0 0 0.3em;
+
+                        }
+                        .highlight {
+                            color: #64B108;
                         }
 
                     }
@@ -359,35 +436,6 @@ textarea {
     }
 
 }
-
-.icon {
-    background-repeat: no-repeat;
-    &.snowflake {
-        background-image:url("/images/snowflake.png");
-    }
-    &.sound {
-        background-image:url("/images/sound.png");
-    }
-    &.wifi {
-        background-image:url("/images/wifi.png");
-    }
-    &.bed {
-        background-image:url("/images/bed.png");
-    }
-    &.user {
-        background-image:url("/images/user.png");
-    }
-}
-
-body {
-    background: url("../images/booking.png") no-repeat center 0;
-}
-
-#booking {
-    margin: 0 auto;
-    width: 1123px;
-}
-
 .bookings {
     background: #537cb4;
     border: 1px solid #003580;
@@ -492,6 +540,94 @@ body {
     transition: all 0.3s linear;
 }
 
+
+/* Basic jQuery Slider essential styles */
+
+ul.bjqs {
+    position: relative;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    display: none;
+ }
+li.bjqs-slide {
+    position: absolute;
+    display: none;
+ }
+ul.bjqs-controls {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    z-index: 9999;
+
+    &.v-centered {
+        li {
+            a {
+                position: absolute;
+                border-top: 6px solid #FFF;
+                display: block;
+                height: 18px;
+                opacity: 0;
+                text-decoration: none;
+                @extend .transition-linear;
+                width: 18px;
+
+                &:hover {
+                    opacity: 0.85;
+                }
+            }
+            &.bjqs-prev a {
+                border-left: 6px solid #FFF;
+                transform: rotate(-45deg);
+                left: 10px;
+            }
+            &.bjqs-next a {
+                border-right: 6px solid #FFF;
+                transform: rotate(45deg);
+                right: 10px;
+            }
+            
+        }
+        &.hover {
+            li {
+                a {
+                    opacity: 0.5;
+                }
+            }
+        }
+
+    }
+
+
+}
+ol.bjqs-markers {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width:100%;
+
+    &.h-centered {
+        text-align: center;
+    }
+    li {
+        display:inline;
+
+        a {
+            display:inline-block;
+        }
+
+    }
+
+ }
+p.bjqs-caption {
+    display:block;
+    width:96%;
+    margin:0;
+    padding:2%;
+    position:absolute;
+    bottom:0;
+}
 
 
 /* ==========================================================================
