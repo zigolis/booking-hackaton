@@ -442,10 +442,12 @@ body {
 .bookings {
   background: #537cb4;
   border: 1px solid #003580;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  border-radius: 7px;
   float: left;
   margin-top: 1410px;
   width: 254px;
-  border-radius: 7px;
   padding: 10px 5px;
   position: relative;
 }
@@ -459,54 +461,145 @@ body {
 /* line 456, ../Sass/base.scss */
 .bookings h4 {
   color: #fff;
-  text-align: center;
+  display: none;
   font-size: 14px;
   margin-bottom: 20px;
+  text-align: center;
 }
-/* line 463, ../Sass/base.scss */
+/* line 464, ../Sass/base.scss */
 .bookings .price {
+  background: #64B108;
+  -webkit-box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.3);
+  color: #fff;
+  display: block;
+  right: 15px;
+  padding: 20px 20px 5px 20px;
   position: absolute;
   top: -15px;
-  background: #64B108;
-  display: block;
-  width: 73px;
-  color: #fff;
-  padding: 20px 10px 5px 10px;
-  left: 150px;
-  border: 2px solid #fff;
-  border-radius: 5px;
+  white-space: nowrap;
 }
-/* line 475, ../Sass/base.scss */
+/* line 477, ../Sass/base.scss */
+.bookings .price:before {
+  content: "";
+  position: absolute;
+  border-style: solid;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #4e8a06;
+  display: block;
+  width: 0;
+  z-index: 1;
+  left: -8px;
+  transform: rotate(-135deg);
+  top: 1%;
+}
+/* line 490, ../Sass/base.scss */
 .bookings .price i {
-  font-size: 20px;
+  font-size: 140%;
   font-style: normal;
 }
-/* line 480, ../Sass/base.scss */
+/* line 495, ../Sass/base.scss */
 .bookings .price small {
-  text-align: right;
   display: block;
-  padding-right: 4px;
+  font-size: 70%;
   font-weight: 100;
   opacity: .7;
+  text-align: right;
 }
-/* line 491, ../Sass/base.scss */
-.bookings li {
-  border-radius: 5px;
+/* line 505, ../Sass/base.scss */
+.bookings ul {
+  list-style: none;
+  margin: 20px 0;
+  padding: 0;
+}
+/* line 510, ../Sass/base.scss */
+.bookings ul li {
+  display: block;
+}
+/* line 513, ../Sass/base.scss */
+.bookings ul li a {
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
   color: #fff;
-  cursor: pointer;
+  cursor: default;
+  display: block;
   font-size: 14px;
-  padding: 10px 7px;
+  padding: 3px 5px;
   position: relative;
+  text-decoration: none;
 }
-/* line 499, ../Sass/base.scss */
-.bookings li:hover {
+/* line 524, ../Sass/base.scss */
+.bookings ul li a:hover {
   background: #003580;
 }
-/* line 504, ../Sass/base.scss */
+/* line 527, ../Sass/base.scss */
+.bookings ul li a:hover span.delete {
+  opacity: 1;
+  right: -30px;
+}
+/* line 533, ../Sass/base.scss */
+.bookings ul li a span {
+  display: table-cell;
+  vertical-align: middle;
+}
+/* line 537, ../Sass/base.scss */
+.bookings ul li a span.name {
+  width: 80%;
+}
+/* line 540, ../Sass/base.scss */
+.bookings ul li a span.qtd {
+  width: 20%;
+}
+/* line 543, ../Sass/base.scss */
+.bookings ul li a span.qtd input {
+  border: none;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  float: right;
+  padding: 8px 12px;
+  width: 28px;
+  position: relative;
+  z-index: 60;
+}
+/* line 554, ../Sass/base.scss */
+.bookings ul li a span.delete {
+  background: #003580;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: block;
+  opacity: 0;
+  padding: 3px 0;
+  position: absolute;
+  right: -20px;
+  text-align: center;
+  top: 0;
+  -webkit-transition: opacity 0.3s linear, right 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s linear, right 0.3s ease-in-out;
+  -ms-transition: opacity 0.3s linear, right 0.3s ease-in-out;
+  -o-transition: opacity 0.3s linear, right 0.3s ease-in-out;
+  transition: opacity 0.3s linear, right 0.3s ease-in-out;
+  width: 37px;
+  z-index: 50;
+}
+/* line 573, ../Sass/base.scss */
+.bookings ul li a span.delete i {
+  background: url("../images/close.png") no-repeat 50% 50%;
+  display: block;
+  height: 33px;
+  width: 33px;
+}
+/* line 590, ../Sass/base.scss */
 .bookings .btn-book-now {
   background: #08a3ff;
   border: 2px solid #fff;
-  border-radius: 5px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
   color: #fff;
   display: block;
   font-family: arial;
@@ -516,22 +609,18 @@ body {
   font-size: 19px;
   margin: 10px 0;
 }
-/* line 518, ../Sass/base.scss */
+/* line 604, ../Sass/base.scss */
 .bookings p {
   font-size: 11px;
   color: #D59F82;
   text-align: center;
 }
-/* line 524, ../Sass/base.scss */
+/* line 610, ../Sass/base.scss */
 .bookings .confirmation {
   color: #fff;
   margin-top: 5px;
 }
-/* line 529, ../Sass/base.scss */
-.bookings ul, .bookings .price, .bookings .btn-book-now, .bookings p {
-  display: none !important;
-}
-/* line 532, ../Sass/base.scss */
+/* line 618, ../Sass/base.scss */
 .bookings .arrow {
   background: url("../images/arrow.png") no-repeat;
   bottom: -70px;
@@ -542,8 +631,8 @@ body {
   width: 114px;
 }
 
-/* line 544, ../Sass/base.scss */
-.transition-linear, .room-table .cards .card .conditions li, .room-table .cards .card .conditions li .room > span.btn > a, .room-table .cards .card .conditions li .tooltip, ul.bjqs-controls.v-centered li a {
+/* line 630, ../Sass/base.scss */
+.transition-linear, .room-table .cards .card .conditions li, .room-table .cards .card .conditions li .room > span.btn > a, .room-table .cards .card .conditions li .tooltip, .bookings ul li a, ul.bjqs-controls.v-centered li a {
   -webkit-transition: all 0.3s linear;
   -moz-transition: all 0.3s linear;
   -ms-transition: all 0.3s linear;
@@ -551,8 +640,17 @@ body {
   transition: all 0.3s linear;
 }
 
+/* line 637, ../Sass/base.scss */
+.transition-ease {
+  -webkit-transition: right 0.3s ease-in-out, left 0.3s ease-in-out, top 0.3s ease-in-out, bottom 0.3s ease-in-out;
+  -moz-transition: right 0.3s ease-in-out, left 0.3s ease-in-out, top 0.3s ease-in-out, bottom 0.3s ease-in-out;
+  -ms-transition: right 0.3s ease-in-out, left 0.3s ease-in-out, top 0.3s ease-in-out, bottom 0.3s ease-in-out;
+  -o-transition: right 0.3s ease-in-out, left 0.3s ease-in-out, top 0.3s ease-in-out, bottom 0.3s ease-in-out;
+  transition: right 0.3s ease-in-out, left 0.3s ease-in-out, top 0.3s ease-in-out, bottom 0.3s ease-in-out;
+}
+
 /* Basic jQuery Slider essential styles */
-/* line 555, ../Sass/base.scss */
+/* line 648, ../Sass/base.scss */
 ul.bjqs {
   position: relative;
   list-style: none;
@@ -562,20 +660,20 @@ ul.bjqs {
   display: none;
 }
 
-/* line 563, ../Sass/base.scss */
+/* line 656, ../Sass/base.scss */
 li.bjqs-slide {
   position: absolute;
   display: none;
 }
 
-/* line 567, ../Sass/base.scss */
+/* line 660, ../Sass/base.scss */
 ul.bjqs-controls {
   list-style: none;
   margin: 0;
   padding: 0;
   z-index: 9999;
 }
-/* line 575, ../Sass/base.scss */
+/* line 668, ../Sass/base.scss */
 ul.bjqs-controls.v-centered li a {
   position: absolute;
   border-top: 6px solid #FFF;
@@ -585,48 +683,48 @@ ul.bjqs-controls.v-centered li a {
   text-decoration: none;
   width: 18px;
 }
-/* line 585, ../Sass/base.scss */
+/* line 678, ../Sass/base.scss */
 ul.bjqs-controls.v-centered li a:hover {
   opacity: 0.85;
 }
-/* line 589, ../Sass/base.scss */
+/* line 682, ../Sass/base.scss */
 ul.bjqs-controls.v-centered li.bjqs-prev a {
   border-left: 6px solid #FFF;
   transform: rotate(-45deg);
   left: 10px;
 }
-/* line 594, ../Sass/base.scss */
+/* line 687, ../Sass/base.scss */
 ul.bjqs-controls.v-centered li.bjqs-next a {
   border-right: 6px solid #FFF;
   transform: rotate(45deg);
   right: 10px;
 }
-/* line 603, ../Sass/base.scss */
+/* line 696, ../Sass/base.scss */
 ul.bjqs-controls.v-centered.hover li a {
   opacity: 0.5;
 }
 
-/* line 613, ../Sass/base.scss */
+/* line 706, ../Sass/base.scss */
 ol.bjqs-markers {
   list-style: none;
   padding: 0;
   margin: 0;
   width: 100%;
 }
-/* line 619, ../Sass/base.scss */
+/* line 712, ../Sass/base.scss */
 ol.bjqs-markers.h-centered {
   text-align: center;
 }
-/* line 622, ../Sass/base.scss */
+/* line 715, ../Sass/base.scss */
 ol.bjqs-markers li {
   display: inline;
 }
-/* line 625, ../Sass/base.scss */
+/* line 718, ../Sass/base.scss */
 ol.bjqs-markers li a {
   display: inline-block;
 }
 
-/* line 632, ../Sass/base.scss */
+/* line 725, ../Sass/base.scss */
 p.bjqs-caption {
   display: block;
   width: 96%;
@@ -642,7 +740,7 @@ p.bjqs-caption {
 /*
  * Hide visually and from screen readers: h5bp.com/u
  */
-/* line 650, ../Sass/base.scss */
+/* line 743, ../Sass/base.scss */
 .hidden {
   display: none !important;
   visibility: hidden;
@@ -651,7 +749,7 @@ p.bjqs-caption {
 /*
  * Hide only visually, but have it available for screen readers: h5bp.com/v
  */
-/* line 659, ../Sass/base.scss */
+/* line 752, ../Sass/base.scss */
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -667,7 +765,7 @@ p.bjqs-caption {
  * Extends the .visuallyhidden class to allow the element to be focusable
  * when navigated to via the keyboard: h5bp.com/p
  */
-/* line 675, ../Sass/base.scss */
+/* line 768, ../Sass/base.scss */
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
   clip: auto;
@@ -681,7 +779,7 @@ p.bjqs-caption {
 /*
  * Hide visually and from screen readers, but maintain layout
  */
-/* line 689, ../Sass/base.scss */
+/* line 782, ../Sass/base.scss */
 .invisible {
   visibility: hidden;
 }
@@ -697,7 +795,7 @@ p.bjqs-caption {
  * 2. The use of `table` rather than `block` is only necessary if using
  *    `:before` to contain the top-margins of child elements.
  */
-/* line 705, ../Sass/base.scss */
+/* line 798, ../Sass/base.scss */
 .clearfix:before, .room-table .cards .card .conditions li:before,
 .clearfix:after,
 .room-table .cards .card .conditions li:after {
@@ -707,7 +805,7 @@ p.bjqs-caption {
   /* 2 */
 }
 
-/* line 711, ../Sass/base.scss */
+/* line 804, ../Sass/base.scss */
 .clearfix:after, .room-table .cards .card .conditions li:after {
   clear: both;
 }
@@ -728,7 +826,7 @@ p.bjqs-caption {
    Inlined to avoid the additional HTTP request: h5bp.com/r
    ========================================================================== */
 @media print {
-  /* line 738, ../Sass/base.scss */
+  /* line 831, ../Sass/base.scss */
   *,
   *:before,
   *:after {
@@ -739,18 +837,18 @@ p.bjqs-caption {
     text-shadow: none !important;
   }
 
-  /* line 747, ../Sass/base.scss */
+  /* line 840, ../Sass/base.scss */
   a,
   a:visited {
     text-decoration: underline;
   }
 
-  /* line 752, ../Sass/base.scss */
+  /* line 845, ../Sass/base.scss */
   a[href]:after {
     content: " (" attr(href) ")";
   }
 
-  /* line 756, ../Sass/base.scss */
+  /* line 849, ../Sass/base.scss */
   abbr[title]:after {
     content: " (" attr(title) ")";
   }
@@ -759,37 +857,37 @@ p.bjqs-caption {
    * Don't show links that are fragment identifiers,
    * or use the `javascript:` pseudo protocol
    */
-  /* line 765, ../Sass/base.scss */
+  /* line 858, ../Sass/base.scss */
   a[href^="#"]:after,
   a[href^="javascript:"]:after {
     content: "";
   }
 
-  /* line 770, ../Sass/base.scss */
+  /* line 863, ../Sass/base.scss */
   pre,
   blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
 
-  /* line 776, ../Sass/base.scss */
+  /* line 869, ../Sass/base.scss */
   thead {
     display: table-header-group;
     /* h5bp.com/t */
   }
 
-  /* line 780, ../Sass/base.scss */
+  /* line 873, ../Sass/base.scss */
   tr,
   img {
     page-break-inside: avoid;
   }
 
-  /* line 785, ../Sass/base.scss */
+  /* line 878, ../Sass/base.scss */
   img {
     max-width: 100% !important;
   }
 
-  /* line 789, ../Sass/base.scss */
+  /* line 882, ../Sass/base.scss */
   p,
   h2,
   h3 {
@@ -797,7 +895,7 @@ p.bjqs-caption {
     widows: 3;
   }
 
-  /* line 796, ../Sass/base.scss */
+  /* line 889, ../Sass/base.scss */
   h2,
   h3 {
     page-break-after: avoid;
