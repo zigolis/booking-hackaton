@@ -531,8 +531,18 @@ body {
 .bookings ul, .bookings .price, .bookings .btn-book-now, .bookings p {
   display: none !important;
 }
+/* line 532, ../Sass/base.scss */
+.bookings .arrow {
+  background: url("../images/arrow.png") no-repeat;
+  bottom: -70px;
+  display: block;
+  height: 58px;
+  position: absolute;
+  right: 0;
+  width: 114px;
+}
 
-/* line 535, ../Sass/base.scss */
+/* line 544, ../Sass/base.scss */
 .transition-linear, .room-table .cards .card .conditions li, .room-table .cards .card .conditions li .room > span.btn > a, .room-table .cards .card .conditions li .tooltip, ul.bjqs-controls.v-centered li a {
   -webkit-transition: all 0.3s linear;
   -moz-transition: all 0.3s linear;
@@ -542,7 +552,7 @@ body {
 }
 
 /* Basic jQuery Slider essential styles */
-/* line 546, ../Sass/base.scss */
+/* line 555, ../Sass/base.scss */
 ul.bjqs {
   position: relative;
   list-style: none;
@@ -552,20 +562,20 @@ ul.bjqs {
   display: none;
 }
 
-/* line 554, ../Sass/base.scss */
+/* line 563, ../Sass/base.scss */
 li.bjqs-slide {
   position: absolute;
   display: none;
 }
 
-/* line 558, ../Sass/base.scss */
+/* line 567, ../Sass/base.scss */
 ul.bjqs-controls {
   list-style: none;
   margin: 0;
   padding: 0;
   z-index: 9999;
 }
-/* line 566, ../Sass/base.scss */
+/* line 575, ../Sass/base.scss */
 ul.bjqs-controls.v-centered li a {
   position: absolute;
   border-top: 6px solid #FFF;
@@ -575,48 +585,48 @@ ul.bjqs-controls.v-centered li a {
   text-decoration: none;
   width: 18px;
 }
-/* line 576, ../Sass/base.scss */
+/* line 585, ../Sass/base.scss */
 ul.bjqs-controls.v-centered li a:hover {
   opacity: 0.85;
 }
-/* line 580, ../Sass/base.scss */
+/* line 589, ../Sass/base.scss */
 ul.bjqs-controls.v-centered li.bjqs-prev a {
   border-left: 6px solid #FFF;
   transform: rotate(-45deg);
   left: 10px;
 }
-/* line 585, ../Sass/base.scss */
+/* line 594, ../Sass/base.scss */
 ul.bjqs-controls.v-centered li.bjqs-next a {
   border-right: 6px solid #FFF;
   transform: rotate(45deg);
   right: 10px;
 }
-/* line 594, ../Sass/base.scss */
+/* line 603, ../Sass/base.scss */
 ul.bjqs-controls.v-centered.hover li a {
   opacity: 0.5;
 }
 
-/* line 604, ../Sass/base.scss */
+/* line 613, ../Sass/base.scss */
 ol.bjqs-markers {
   list-style: none;
   padding: 0;
   margin: 0;
   width: 100%;
 }
-/* line 610, ../Sass/base.scss */
+/* line 619, ../Sass/base.scss */
 ol.bjqs-markers.h-centered {
   text-align: center;
 }
-/* line 613, ../Sass/base.scss */
+/* line 622, ../Sass/base.scss */
 ol.bjqs-markers li {
   display: inline;
 }
-/* line 616, ../Sass/base.scss */
+/* line 625, ../Sass/base.scss */
 ol.bjqs-markers li a {
   display: inline-block;
 }
 
-/* line 623, ../Sass/base.scss */
+/* line 632, ../Sass/base.scss */
 p.bjqs-caption {
   display: block;
   width: 96%;
@@ -632,7 +642,7 @@ p.bjqs-caption {
 /*
  * Hide visually and from screen readers: h5bp.com/u
  */
-/* line 641, ../Sass/base.scss */
+/* line 650, ../Sass/base.scss */
 .hidden {
   display: none !important;
   visibility: hidden;
@@ -641,7 +651,7 @@ p.bjqs-caption {
 /*
  * Hide only visually, but have it available for screen readers: h5bp.com/v
  */
-/* line 650, ../Sass/base.scss */
+/* line 659, ../Sass/base.scss */
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -657,7 +667,7 @@ p.bjqs-caption {
  * Extends the .visuallyhidden class to allow the element to be focusable
  * when navigated to via the keyboard: h5bp.com/p
  */
-/* line 666, ../Sass/base.scss */
+/* line 675, ../Sass/base.scss */
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
   clip: auto;
@@ -671,7 +681,7 @@ p.bjqs-caption {
 /*
  * Hide visually and from screen readers, but maintain layout
  */
-/* line 680, ../Sass/base.scss */
+/* line 689, ../Sass/base.scss */
 .invisible {
   visibility: hidden;
 }
@@ -687,7 +697,7 @@ p.bjqs-caption {
  * 2. The use of `table` rather than `block` is only necessary if using
  *    `:before` to contain the top-margins of child elements.
  */
-/* line 696, ../Sass/base.scss */
+/* line 705, ../Sass/base.scss */
 .clearfix:before, .room-table .cards .card .conditions li:before,
 .clearfix:after,
 .room-table .cards .card .conditions li:after {
@@ -697,7 +707,7 @@ p.bjqs-caption {
   /* 2 */
 }
 
-/* line 702, ../Sass/base.scss */
+/* line 711, ../Sass/base.scss */
 .clearfix:after, .room-table .cards .card .conditions li:after {
   clear: both;
 }
@@ -718,7 +728,7 @@ p.bjqs-caption {
    Inlined to avoid the additional HTTP request: h5bp.com/r
    ========================================================================== */
 @media print {
-  /* line 729, ../Sass/base.scss */
+  /* line 738, ../Sass/base.scss */
   *,
   *:before,
   *:after {
@@ -729,18 +739,18 @@ p.bjqs-caption {
     text-shadow: none !important;
   }
 
-  /* line 738, ../Sass/base.scss */
+  /* line 747, ../Sass/base.scss */
   a,
   a:visited {
     text-decoration: underline;
   }
 
-  /* line 743, ../Sass/base.scss */
+  /* line 752, ../Sass/base.scss */
   a[href]:after {
     content: " (" attr(href) ")";
   }
 
-  /* line 747, ../Sass/base.scss */
+  /* line 756, ../Sass/base.scss */
   abbr[title]:after {
     content: " (" attr(title) ")";
   }
@@ -749,37 +759,37 @@ p.bjqs-caption {
    * Don't show links that are fragment identifiers,
    * or use the `javascript:` pseudo protocol
    */
-  /* line 756, ../Sass/base.scss */
+  /* line 765, ../Sass/base.scss */
   a[href^="#"]:after,
   a[href^="javascript:"]:after {
     content: "";
   }
 
-  /* line 761, ../Sass/base.scss */
+  /* line 770, ../Sass/base.scss */
   pre,
   blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
 
-  /* line 767, ../Sass/base.scss */
+  /* line 776, ../Sass/base.scss */
   thead {
     display: table-header-group;
     /* h5bp.com/t */
   }
 
-  /* line 771, ../Sass/base.scss */
+  /* line 780, ../Sass/base.scss */
   tr,
   img {
     page-break-inside: avoid;
   }
 
-  /* line 776, ../Sass/base.scss */
+  /* line 785, ../Sass/base.scss */
   img {
     max-width: 100% !important;
   }
 
-  /* line 780, ../Sass/base.scss */
+  /* line 789, ../Sass/base.scss */
   p,
   h2,
   h3 {
@@ -787,7 +797,7 @@ p.bjqs-caption {
     widows: 3;
   }
 
-  /* line 787, ../Sass/base.scss */
+  /* line 796, ../Sass/base.scss */
   h2,
   h3 {
     page-break-after: avoid;

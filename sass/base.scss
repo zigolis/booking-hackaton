@@ -529,6 +529,15 @@ body {
     ul, .price, .btn-book-now, p {
         display: none !important;
     }
+    .arrow {
+        background: url("../images/arrow.png") no-repeat;
+        bottom: -70px;
+        display: block;
+        height: 58px;
+        position: absolute;
+        right: 0;
+        width: 114px;
+    }
 }
 
 
